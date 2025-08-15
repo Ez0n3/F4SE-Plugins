@@ -1,0 +1,4 @@
+LIBRARY "ez_f4se_plugin_example"
+EXPORTS
+F4SEPlugin_Query
+F4SEPlugin_Load
