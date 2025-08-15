@@ -10,18 +10,20 @@
   
 Updated: **August 15, 2025**  
   
+This repo contains Plugins for Fallout 4 (Next Gen) - F4SE, including a Plugin Example (**Status: Tested and Working**).  
+  
 **F4SE** is an SDK created by [Ian Patterson](https://github.com/ianpatt), which extends the functionality of **Fallout 4 (Next Gen)** for mod authors.  
 The original SDK used for building the F4SE EXE can be found here: [F4SE](https://f4se.silverlock.org/) [F4SE Repo](https://github.com/ianpatt/f4se)  
 Using F4SE in your mod will then make F4SE a **Dependency** which you must must inform your users of and provide a link to.  
   
-This repo contains Plugins for Fallout 4 (Next Gen) - F4SE, including a Plugin Example (**Status: Tested and Working**).  
-  
-This mirror of the SDK is currently set to support Fallout 4 (Next Gen) runtime: **1.10.984.0 (0x010A3D80)** - F4SE build: **0.0.7.2**, other versions will need to be manually configured.  
+This mirror of the SDK is currently set to support Fallout 4 (Next Gen) runtime version: **1.10.984.0** - F4SE version: **0.0.7.2**, other versions will need to be manually configured.  
 It has also been pre-configured to build **Plugins** and is not intended for building the full EXE (Core and Loader).  
   
 All necessary projects have been migrated to and built with **Visual Studio 2022 (v143)**, which can be downloaded here: [Visual Studio 2020](https://visualstudio.microsoft.com/downloads/)   
 
-
+  
+[Back to top](#f4se-plugins)  
+  
 ## Construction:  
   
 To build plugins, open "F4SE-Plugins/f4se_plugins" and then open the plugin folder you want to build. EG: **ez_f4se_plugin_example**.  
@@ -57,7 +59,9 @@ bLoadDebugInformation=1
 bEnableProfiling=0  
 sDefaultLogOverlay=Papyrus  
 ```
-
+  
+[Back to top](#f4se-plugins)  
+  
 ## Integration:  
   
 Integrating the example plugin with Fallout 4 involves creating a new Plugin Script which interfaces with the plugin dll.  
@@ -93,7 +97,9 @@ Event OnQuestInit()
 EndEvent  
 ```
  * Use the PapyrusCompiler.exe to compile the 2 newly created Scripts into .pex files.
-
+  
+[Back to top](#f4se-plugins)  
+  
 ## Duplication:  
   
 Duplicating the plugin example to make your own plugin is quite easy if you follow these steps:  
@@ -124,7 +130,7 @@ System.Guid.NewGuid().ToString().ToUpper()
  * Replace "ProjectGuid" with the GUID you generated above, this must be unique to the project.  
  * Replace "ProjectName" and "RootNamespace" to your new plugins "short" name. EG:  
 ```
-    <ProjectGuid>{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}</ProjectGuid>  
+    <ProjectGuid>{11111111-2222-3333-4444-555555555555}</ProjectGuid>  
     <ProjectName>my_cool_new_plugin</ProjectName>  
     <RootNamespace>my_cool_new_plugin</RootNamespace>  
 ```
@@ -149,9 +155,12 @@ Select your new "my_cool_new_plugin.vcxproj" or "my_cool_new_plugin_lean.vcxproj
 Select a Configuration (Debug or Release) and then Build the solution to test it.  
 After completion, open the ./Builds/Configuration/ folder and there should be your new dll file. EG: **my_cool_new_plugin.dll**  
   
+[Back to top](#f4se-plugins)  
+  
 ## Donation:  
   
 If you enjoy and/or find this content useful, consider [buying me a coffee!](https://www.paypal.com/donate/?hosted_button_id=757K44LRCMVRW) :coffee:  
   
+[Back to top](#f4se-plugins)
 
 
